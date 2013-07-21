@@ -27,6 +27,9 @@
 (setq show-trailing-whitespace t)
 (setq suggest-key-bindings t)
 (setq vc-follow-symlinks t)
+;;(setq mac-command-modifier 'meta)
+;; "The Mac cmd modifier isn't passed through (and might even not be encodable in standard terminal protocols / character sets). If you want this to work you should think about running Emacs.app as an application."
+;; http://stackoverflow.com/questions/14905133/how-to-set-cmd-key-binding-in-emacs
 
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
@@ -65,6 +68,7 @@
 (global-set-key "\M-d" 'delete-word)
 (global-set-key "\M-h" 'backward-delete-word)
 (global-set-key "\M-u" 'zap-to-char)
+(global-set-key "\M-k" '(lambda () (interactive) (kill-line 0)) ) ;; tylor
 
 ;; ---------------------------
 ;; -- JS Mode configuration --
